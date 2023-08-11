@@ -9,4 +9,4 @@ export const COLORS = [
 	'#f18d38',
 ];
 
-export const EFFECT = ['scale', 'rotate', 'flashing'];
+export const EFFECT = ['', 'scale', 'rotate', 'flashing'];
