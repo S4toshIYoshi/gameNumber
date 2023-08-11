@@ -2,4 +2,4 @@
 
 ## Написана на нативном js html css
 
-### запустить преокт npm dev / yarn run dev
+### запустить преокт npm run dev / yarn run dev
