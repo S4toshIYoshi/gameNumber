@@ -21,6 +21,10 @@ export const render = (value, searchNumber) => {
 	}
 
 	const gameMain = document.querySelector('.game__main');
+	if (searchNumber.length < 16) {
+		gameMain.classList.remove('_grid25');
+		gameMain.classList.remove('_grid12');
+	}
 
 	if (searchNumber.length > 16) {
 		gameMain.classList.add('_grid25');

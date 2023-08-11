@@ -1,4 +1,4 @@
-import { COLORS, EFFECT } from '../../data/randomValue';
+import { COLORS, EFFECT } from '../../../data/randomValue';
 
 export const randomNumber = (max, min = 0) => {
 	return Math.floor(Math.random() * (max - min) + min);

@@ -1,4 +1,4 @@
-import { getRandomValues } from '../random';
+import { getRandomValues } from '../utils/random';
 import { render } from '../render/render';
 import { getDifficulty } from './settingDifficulty';
 

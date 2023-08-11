@@ -16,6 +16,7 @@
 	<body>
 		<main class="root">
 			<section class="field" id="field">
+				<div class="countdown close"><div class="count"></div></div>
 				<div class="field__game close" id="screenGame">
 					<div class="game__information"></div>
 					<div class="game_wrapper">
@@ -26,7 +27,12 @@
 						<div class="game__main" id="fieldGame"></div>
 					</div>
 				</div>
-
+				<div class="game__mark close" id="succsess">
+					<img src="./assets/succsess.svg" alt="succsess" />
+				</div>
+				<div class="game__mark close" id="cross">
+					<img src="./assets/cross.svg" alt="cross" />
+				</div>
 				<div class="start-menu" id="screenStart">
 					<div class="start-menu__header-menu">
 						<div class="header-menu__wrapper">
@@ -75,6 +81,24 @@
 					</div>
 					<div class="button__wrapper">
 						<button class="button" id="buttonNext">Далее</button>
+					</div>
+				</div>
+				<div class="end-menu close" id="screenEnd">
+					<div class="end-menu__container">
+						<div class="end-menu__header heading">Ваши результаты</div>
+						<div class="end-menu__wrapper">
+							<ul class="end-menu__list">
+								<li>Текущий результат: <span id="result"></span></li>
+								<li>верных ответов: <span id="correctAnswer"></span></li>
+								<li>
+									Точность верных ответов: <span id="accuracyAnswer"></span>
+								</li>
+							</ul>
+						</div>
+
+						<div class="button__wrapper">
+							<button class="button" id="buttonDown">ЕЩЕ РАЗ?</button>
+						</div>
 					</div>
 				</div>
 			</section>

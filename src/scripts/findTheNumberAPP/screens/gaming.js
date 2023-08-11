@@ -1,12 +1,14 @@
 import { COLORS } from '../../../data/randomValue';
+import { endGame } from './endGame';
 import { InfoBar } from '../infoBar/infoBar';
 import { createLvl } from '../level/createLvl';
+import { mark } from './mark';
 
-const { randomNumber } = require('../random');
+const { randomNumber } = require('../utils/random');
 
 export const run = () => {
 	//init
-	let information = new InfoBar('.game__information', 1, 1, 0, 1);
+	let information = new InfoBar('.game__information', 10, 1, 0, 1);
 	information.start();
 
 	let value = createLvl(information.get().lvl);
@@ -14,6 +16,13 @@ export const run = () => {
 	let isStop = false;
 
 	let timer;
+
+	const statistic = {
+		result: 0,
+		correctAnswer: 0,
+		allAnswer: 0,
+		accuracyAnswer: 0,
+	};
 
 	information.render();
 	timer = setInterval(() => {
@@ -37,17 +46,22 @@ export const run = () => {
 				information.setBoost(true);
 				information.setLvl(true);
 
-				value = createLvl(information.get().lvl);
-				information.render();
+				statistic.result = information.score;
+				statistic.correctAnswer++;
+				mark(true);
 			} else {
 				information.setBoost(false);
-				value = createLvl(information.get().lvl);
-				information.render();
+				mark(false);
 			}
+
+			value = createLvl(information.get().lvl);
+			information.render();
+			statistic.allAnswer++;
 		}
 
 		if (isStop) {
-			console.log('STOPED!');
+			field.style.backgroundColor = '#fff';
+			endGame(statistic);
 		}
 	});
 };
