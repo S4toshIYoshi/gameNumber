@@ -1,4 +1,5 @@
 // CSS
+
 import './scripts/findTheNumberAPP/infoBar/style.css';
 import './scripts/findTheNumberAPP/screens/countdownScreen/style.css';
 import './scripts/findTheNumberAPP/screens/endgameScreen/style.css';
@@ -9,7 +10,6 @@ import './assets/_globalStyle.css';
 import './assets/_reset.css';
 import './assets/_animate.css';
 import './assets/_modificators.css';
-
 //scripts
 import { startGame } from './scripts/findTheNumberAPP/screens/startGameScreen/startGame';
 

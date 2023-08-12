@@ -1,10 +1,15 @@
+.field__game {
+	position: relative;
+	display: block;
+}
+
 .game__information {
 	position: absolute;
 	top: 0;
 	right: 0;
 
 	display: flex;
-	width: 50%;
+	width: 350px;
 	justify-content: space-between;
 	padding: 10px 20px;
 
@@ -88,4 +93,42 @@
 
 .cardNumber:hover {
 	box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+	.game__information {
+		top: 0;
+		right: 50%;
+		transform: translate(50%);
+	}
+
+	.game__item-mobile {
+		display: none;
+	}
+
+	.game__header p:first-child {
+		font-size: 20px;
+	}
+	.game__header p:last-child {
+		font-size: 40px;
+	}
+
+	.cardNumber {
+		padding: 10px 15px;
+	}
+
+	.game__main {
+		grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+		font-size: 30px;
+	}
+
+	.game__main._grid12 {
+		grid-template-columns: repeat(auto-fill, minmax(50px, 1fr));
+		font-size: 25px;
+	}
+
+	.game__main._grid25 {
+		grid-template-columns: repeat(auto-fill, minmax(40px, 1fr));
+		font-size: 20px;
+	}
 }

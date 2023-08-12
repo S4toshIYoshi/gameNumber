@@ -8,6 +8,15 @@
 	font-weight: 300;
 }
 
+@media (max-width: 768px) {
+	.heading {
+		font-size: 30px;
+	}
+	.description {
+		font-size: 15px;
+	}
+}
+
 .bold {
 	font-weight: 500;
 }
