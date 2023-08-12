@@ -1,4 +1,4 @@
-import { progressBar } from './progressBar';
+import {progressBar} from './progressBar';
 
 export class InfoBar {
 	//примает class DOM элемента где будет с рендерин и начальные настройки
@@ -17,7 +17,7 @@ export class InfoBar {
 			time: this.time,
 			lvl: this.lvl,
 			score: this.score,
-			boost: this.boost,
+			boost: this.boost
 		};
 	}
 
@@ -49,7 +49,7 @@ export class InfoBar {
 
 	setBoost(set) {
 		if (set) {
-			if (this.boost <= 5) {
+			if (this.boost < 5) {
 				this.boost++;
 			}
 		} else {
