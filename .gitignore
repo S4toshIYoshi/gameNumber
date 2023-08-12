@@ -3,6 +3,6 @@
 
 # src
 /src
-/public
+/public/index.html
 
 ./webpack.config.js
