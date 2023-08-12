@@ -1,1 +1,109 @@
-<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Document</title><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap" rel="stylesheet"/><script defer="defer" src="main.f188a69461d49a8ba84d.js"></script></head><body><main class="root"><section class="field" id="field"><div class="countdown close"><div class="count"></div></div><div class="field__game close" id="screenGame"><div class="game__information"></div><div class="game_wrapper"><div class="game__header"><p class="game__item">Найдите указанное число:</p><p class="game__item" id="searchItem"></p></div><div class="game__main" id="fieldGame"></div></div></div><div class="game__mark close" id="succsess"><img src="./assets/succsess.svg" alt="succsess" class="rotate"/></div><div class="game__mark close" id="cross"><img src="./assets/cross.svg" alt="cross" class="rotate"/></div><div class="start-menu" id="screenStart"><div class="start-menu__header-menu"><div class="header-menu__wrapper"><h1 class="header-menu__heading heading bold">Найди число</h1><p class="header-menu__description description">Тренажер на внимание</p></div></div><div class="start-menu__main-menu"><div class="main-menu__wrapper"><h2 class="main-menu__heading">Тренирует:</h2><ul class="main-menu__list"><li class="main-menu__list-item"><div class="list-item__wrapper"><h3 class="list-item__heading description bold">Произвольное внимание</h3><p class="main-menu__description description">Научитесь концентрировать внимание только на важном</p></div></li><li class="main-menu__list-item"><div class="list-item__wrapper"><h3 class="list-item__heading description bold">Концентрацию и переключение внимания</h3><p class="main-menu__description description">Позволит не упускать из виду важные детали</p></div></li><li class="main-menu__list-item"><div class="list-item__wrapper"><h3 class="list-item__heading description bold">Зрительное восприятие</h3><p class="main-menu__description description">Сможете быстро находить основные мысли в текстах</p></div></li></ul></div></div><div class="button__wrapper"><button class="button" id="buttonNext">Далее</button></div></div><div class="end-menu close" id="screenEnd"><div class="end-menu__container"><div class="end-menu__header heading">Ваши результаты</div><div class="end-menu__wrapper"><ul class="end-menu__list"><li>Текущий результат: <span id="result"></span></li><li>верных ответов: <span id="correctAnswer"></span></li><li>Точность верных ответов: <span id="accuracyAnswer"></span></li></ul></div><div class="button__wrapper"><button class="button" id="buttonDown">ЕЩЕ РАЗ?</button></div></div></div></section></main></body></html>
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<title>Document</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap"
+			rel="stylesheet" />
+		<script
+			defer="defer"
+			src="./assets/scripts/main.f188a69461d49a8ba84d.js"></script>
+	</head>
+	<body>
+		<main class="root">
+			<section class="field" id="field">
+				<div class="countdown close"><div class="count"></div></div>
+				<div class="field__game close" id="screenGame">
+					<div class="game__information"></div>
+					<div class="game_wrapper">
+						<div class="game__header">
+							<p class="game__item">Найдите указанное число:</p>
+							<p class="game__item" id="searchItem"></p>
+						</div>
+						<div class="game__main" id="fieldGame"></div>
+					</div>
+				</div>
+				<div class="game__mark close" id="succsess">
+					<img
+						src="./assets/images/succsess.svg"
+						alt="succsess"
+						class="rotate" />
+				</div>
+				<div class="game__mark close" id="cross">
+					<img src="./assets/images/cross.svg" alt="cross" class="rotate" />
+				</div>
+				<div class="start-menu" id="screenStart">
+					<div class="start-menu__header-menu">
+						<div class="header-menu__wrapper">
+							<h1 class="header-menu__heading heading bold">Найди число</h1>
+							<p class="header-menu__description description">
+								Тренажер на внимание
+							</p>
+						</div>
+					</div>
+					<div class="start-menu__main-menu">
+						<div class="main-menu__wrapper">
+							<h2 class="main-menu__heading">Тренирует:</h2>
+							<ul class="main-menu__list">
+								<li class="main-menu__list-item">
+									<div class="list-item__wrapper">
+										<h3 class="list-item__heading description bold">
+											Произвольное внимание
+										</h3>
+										<p class="main-menu__description description">
+											Научитесь концентрировать внимание только на важном
+										</p>
+									</div>
+								</li>
+								<li class="main-menu__list-item">
+									<div class="list-item__wrapper">
+										<h3 class="list-item__heading description bold">
+											Концентрацию и переключение внимания
+										</h3>
+										<p class="main-menu__description description">
+											Позволит не упускать из виду важные детали
+										</p>
+									</div>
+								</li>
+								<li class="main-menu__list-item">
+									<div class="list-item__wrapper">
+										<h3 class="list-item__heading description bold">
+											Зрительное восприятие
+										</h3>
+										<p class="main-menu__description description">
+											Сможете быстро находить основные мысли в текстах
+										</p>
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="button__wrapper">
+						<button class="button" id="buttonNext">Далее</button>
+					</div>
+				</div>
+				<div class="end-menu close" id="screenEnd">
+					<div class="end-menu__container">
+						<div class="end-menu__header heading">Ваши результаты</div>
+						<div class="end-menu__wrapper">
+							<ul class="end-menu__list">
+								<li>Текущий результат: <span id="result"></span></li>
+								<li>верных ответов: <span id="correctAnswer"></span></li>
+								<li>
+									Точность верных ответов: <span id="accuracyAnswer"></span>
+								</li>
+							</ul>
+						</div>
+						<div class="button__wrapper">
+							<button class="button" id="buttonDown">ЕЩЕ РАЗ?</button>
+						</div>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>
