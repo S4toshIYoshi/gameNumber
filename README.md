@@ -1,5 +1,9 @@
 # Браузерная игра в запоминания чисел
 
-## Написана на нативном js html css
+## production
 
-### запустить преокт npm run dev / yarn run dev
+https://s4toshiyoshi.github.io/gameNumber/
+
+## Написана на нативном js html css сборка WebPack
+
+запустить преокт npm run dev / yarn run dev
