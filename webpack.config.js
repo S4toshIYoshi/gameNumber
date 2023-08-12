@@ -2,8 +2,15 @@ const path = require('path');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 
+const mode = process.env.NODE_ENV || 'development';
+
+const devMode = mode === 'development';
+
+const devtool = devMode ? 'source-map' : undefined;
+
 module.exports = {
-	mode: 'development',
+	mode,
+	devtool,
 	entry: {
 		main: path.resolve(__dirname, 'src', 'index.js'),
 	},

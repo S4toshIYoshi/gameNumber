@@ -1,3 +1,5 @@
+//генерирует массив похожий на прогресс например [1,0,0,0]
+//примает какое сейчас значение прогресса и максимальное колличесвто прогресса
 export const initStatus = (value, max) => {
 	const result = [];
 
@@ -12,6 +14,7 @@ export const initStatus = (value, max) => {
 	return result;
 };
 
+//возвращает строку html элемента с прогрессом например ***oo - где звездочка это закрашенная точка, а о нет
 export const progressBar = (value, max) => {
 	const status = initStatus(value, max);
 
@@ -22,5 +25,5 @@ export const progressBar = (value, max) => {
 		}'></div>`;
 	});
 
-	return `<div class='progress-bar'>${result}<p>X${max}</p></div>`;
+	return `<div class='progress-bar'>${result}<p>X${value}</p></div>`;
 };

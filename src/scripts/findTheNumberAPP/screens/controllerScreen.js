@@ -1,5 +1,6 @@
-import { countdownTime } from './countdown';
+import { countdownTime } from './countdownScreen/countdown';
 
+//примает объект и класс котрый нужно найти если совпадения есть вернет false если нету true
 const searchClass = (obj, className) => {
 	let isUnique = false;
 
@@ -13,6 +14,9 @@ const searchClass = (obj, className) => {
 	return isUnique;
 };
 
+//чтобы не получилось ситуация где класс выглядит так element close close..., сделана эта функция
+//на вход принимает объект в который нужно добавить определенный класс, action это действия remove или add
+//производит поиск и если значения нет то добовляет класс елси есть то нет, remove класса происходит без условий
 const toggleClass = (obj, action, className) => {
 	if (action === 'add') {
 		if (!searchClass(obj.classList, className)) {
@@ -24,6 +28,8 @@ const toggleClass = (obj, action, className) => {
 	}
 };
 
+//на вход принимает 4 экрана и выводит те в какие переданно true значение
+//контроль производиться просто по добовлению класса close с атрибутом display: none; в экраны которое передан false
 export const controllerScreen = (start, timer, game, end) => {
 	const screenStart = document.getElementById('screenStart');
 	const screenGame = document.getElementById('screenGame');

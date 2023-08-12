@@ -1,15 +1,17 @@
 // CSS
-
-import './assets/countdown.css';
-import './assets/endMenu.css';
-import './assets/mark.css';
-import './assets/style.css';
-import './assets/reset.css';
-import './assets/animate.css';
+import './scripts/findTheNumberAPP/infoBar/style.css';
+import './scripts/findTheNumberAPP/screens/countdownScreen/style.css';
+import './scripts/findTheNumberAPP/screens/endgameScreen/style.css';
+import './scripts/findTheNumberAPP/screens/gameScreen/style.css';
+import './scripts/findTheNumberAPP/screens/mark/style.css';
+import './scripts/findTheNumberAPP/screens/startGameScreen/style.css';
+import './assets/_globalStyle.css';
+import './assets/_reset.css';
+import './assets/_animate.css';
 import './assets/_modificators.css';
 
-import './scripts/findTheNumberAPP/screens/startGame';
+//scripts
+import { startGame } from './scripts/findTheNumberAPP/screens/startGameScreen/startGame';
 
-import { startGame } from './scripts/findTheNumberAPP/screens/startGame';
-
+//запускает игру найди число
 startGame();

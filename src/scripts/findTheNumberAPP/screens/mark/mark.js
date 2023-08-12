@@ -1,3 +1,6 @@
+//отрусует крестик или галочку в середине экрана
+//true галочка
+//false крестик
 export const mark = answer => {
 	const wrapperSuccses = document.getElementById('succsess');
 	const wrapperCross = document.getElementById('cross');
@@ -15,7 +18,4 @@ export const mark = answer => {
 			wrapperCross.classList.add('close');
 		}
 	}, 500);
-
-	console.log(wrapperSuccses);
-	console.log(wrapperCross);
 };

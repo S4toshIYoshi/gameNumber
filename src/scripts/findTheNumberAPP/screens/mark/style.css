@@ -16,8 +16,4 @@
 .game__mark img {
 	width: 100px;
 	height: 100px;
-
-	animation-duration: 0.6s;
-	animation-name: rotate;
-	animation-iteration-count: infinite;
 }

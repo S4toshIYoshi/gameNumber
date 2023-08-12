@@ -1,6 +1,8 @@
 import { progressBar } from './progressBar';
 
 export class InfoBar {
+	//примает class DOM элемента где будет с рендерин и начальные настройки
+	//время в секундах, уровень, очки, буст
 	constructor(layout, time, lvl, score, boost) {
 		(this.time = time),
 			(this.lvl = lvl),
@@ -9,6 +11,7 @@ export class InfoBar {
 			(this.layout = layout);
 	}
 
+	//получить актуальное состояние
 	get() {
 		return {
 			time: this.time,
@@ -18,6 +21,7 @@ export class InfoBar {
 		};
 	}
 
+	//запускает таймер
 	start() {
 		const interval = setInterval(() => {
 			this.time--;
@@ -27,14 +31,20 @@ export class InfoBar {
 		}, 1000);
 	}
 
-	setLvl() {
-		if (this.lvl < 9) {
-			this.lvl++;
+	setLvl(set) {
+		if (set) {
+			if (this.lvl < 9) {
+				this.lvl++;
+			}
+		} else {
+			if (this.lvl > 1) {
+				this.lvl--;
+			}
 		}
 	}
 
 	setScore() {
-		this.score += 44 * this.boost;
+		this.score += (42 + this.lvl * 10) * this.boost;
 	}
 
 	setBoost(set) {
@@ -49,6 +59,7 @@ export class InfoBar {
 		}
 	}
 
+	//иницализирует таймер в формате 00:00
 	initTimer(value) {
 		const sec = Math.trunc(value % 60);
 		const min = Math.trunc((value / 60) % 60);
@@ -59,6 +70,7 @@ export class InfoBar {
 		return `${minDoubleZero}:${secDoubleZero}`;
 	}
 
+	//отрисовывает панель с информации по переданному лайоуту
 	render() {
 		const gameInformation = document.querySelector(this.layout);
 

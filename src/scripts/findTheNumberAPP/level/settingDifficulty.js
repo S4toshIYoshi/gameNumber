@@ -1,3 +1,4 @@
+//примает уровень и в зависимости от уровня возвращает его настройки
 export const getDifficulty = lvl => {
 	switch (lvl) {
 		case 1:

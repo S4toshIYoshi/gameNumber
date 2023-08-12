@@ -1,6 +1,6 @@
-import { controllerScreen } from './controllerScreen';
+import { controllerScreen } from '../controllerScreen';
 
-const { run } = require('./gaming');
+const { run } = require('../gameScreen/game');
 
 export const startGame = () => {
 	const button = document.getElementById('buttonNext');
