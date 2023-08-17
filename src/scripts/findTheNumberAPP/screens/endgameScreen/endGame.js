@@ -18,7 +18,7 @@ export const endGame = statistic => {
 
 	const button = document.getElementById('buttonDown');
 
-	controllerScreen(false, false, false, true);
+	controllerScreen('.end-menu', ['.start-menu', '.field__game', '.countdown']);
 
 	//как только будет нажата кнопка произойдет перезагрузка
 	button.addEventListener('click', () => {

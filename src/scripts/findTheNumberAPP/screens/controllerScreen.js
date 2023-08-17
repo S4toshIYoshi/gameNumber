@@ -28,40 +28,19 @@ const toggleClass = (obj, action, className) => {
 	}
 };
 
-//на вход принимает 4 экрана и выводит те в какие переданно true значение
-//контроль производиться просто по добовлению класса close с атрибутом display: none; в экраны которое передан false
-export const controllerScreen = (start, timer, game, end) => {
-	const screenStart = document.getElementById('screenStart');
-	const screenGame = document.getElementById('screenGame');
-	const countdown = document.querySelector('.countdown');
+/**
+ *
+ * @param {*openScreen экран который должен быть с параметром open*} openScreen
+ * @param {*closeScreen колекция экранов которые должны быть спараметром close*} closeScreen
+ */
+export const controllerScreen = (openScreen, closeScreen = []) => {
+	const screenOpen = document.querySelector(openScreen);
+	toggleClass(screenOpen, 'remove', 'close');
 
-	if (start) {
-		toggleClass(screenStart, 'remove', 'close');
-		toggleClass(screenGame, 'add', 'close');
-		toggleClass(screenEnd, 'add', 'close');
-		toggleClass(countdown, 'add', 'close');
-	}
+	closeScreen.forEach(value => {
+		toggleClass(document.querySelector(value), 'add', 'close');
+		console.log(value);
 
-	if (timer) {
-		toggleClass(screenStart, 'add', 'close');
-		toggleClass(screenGame, 'add', 'close');
-		toggleClass(screenEnd, 'add', 'close');
-		toggleClass(countdown, 'remove', 'close');
-
-		countdownTime(3);
-	}
-
-	if (game) {
-		toggleClass(screenStart, 'add', 'close');
-		toggleClass(screenGame, 'remove', 'close');
-		toggleClass(screenEnd, 'add', 'close');
-		toggleClass(countdown, 'add', 'close');
-	}
-
-	if (end) {
-		toggleClass(screenStart, 'add', 'close');
-		toggleClass(screenGame, 'add', 'close');
-		toggleClass(screenEnd, 'remove', 'close');
-		toggleClass(countdown, 'add', 'close');
-	}
+		console.log(document.querySelector(value));
+	});
 };
